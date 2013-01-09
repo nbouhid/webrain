@@ -1,5 +1,9 @@
 <?php
 
+function webrain_preprocess_views_view(&$vars) {
+  _webrain_perform_view_preprocess(__FUNCTION__, $vars);
+}
+
 /**
  * Implementation of template_preprocess_views_view_fields
  * 
@@ -104,7 +108,7 @@ function _webrain_perform_view_preprocess($preprocess_prefix, &$vars) {
   $function = implode('__', array($preprocess_prefix, $view->name, $view->current_display));
 var_dump($function);
   if (function_exists($function)) {
-    $function($vars);
+    //$function($vars);
   }
 }
 
