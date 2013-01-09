@@ -1,0 +1,46 @@
+div.view-slider div.view-content div.item-list{
+	width: 830px; /* Defines the size of the visible part of the carousel
+		Attention : if you only want to see plain items in the viewport,
+		the width of the viewport should take into account of :
+		- the items width
+		- the right and left padding of items
+		- the number of items you want to see in the viewport
+	 */
+	overflow:hidden; /* Hides extra elements, those outside the viewport area */
+	/* Fix for IE */
+	position:relative;
+}
+div.view-slider div.view-content div.item-list ul{
+	position: relative; /* Enables positionning of elements inside viewport */
+	padding: 0; /* Resets default - User Agent - style */
+	margin: 0;
+}
+div.view-slider div.view-content div.item-list li{
+	width: 830px; /* Defines the size of inner element */
+	height: 175px;
+	float: left; /* Places list items side by side*/
+	list-style: none; /* Resets default - User Agent - style */
+  margin: 0;
+}
+
+/* Cosmetic */
+.carousel-previous, .carousel-next{
+	cursor: pointer;
+	font-size: 0.8em;
+	text-decoration: none;	
+  background-color: #242f21;
+  width: 13px;
+  height: 20px;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 8px 5px;
+  position: absolute;
+  z-index: 5;
+  bottom: 0px;
+}
+.carousel-previous {
+  right: 25px;
+}
+.carousel-next {
+  right: 2px;
+}

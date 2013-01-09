@@ -1,0 +1,23 @@
+
+name = WEBrain
+description = Tema visual de WEBrain
+version = 1.0
+core = 7.x
+
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = libs/jqtransformplugin/jqtransform.css
+stylesheets[all][] = css/jquery.infinite-carousel.css
+
+scripts[] = scripts/theme_general.js
+scripts[] = libs/jqtransformplugin/jquery.jqtransform.js
+scripts[] = scripts/jquery.infinite-carousel.js
+
+regions[header] = Header
+
+regions[left_sidebar] = Left sidebar
+
+regions[content_top] = Sobre contenido
+regions[content] = Content
+regions[content_bottom] = Debajo contenido
+
+regions[footer] = Footer
