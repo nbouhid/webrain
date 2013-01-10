@@ -470,11 +470,12 @@ div#block-block-4 {
   font-family: Verdana;
   font-size: 11px;
   color: #90a627;
+  width: 65%;
+  float: left;
 }
 
 div#block-block-4 p {
   float: left;
-  width: 50%;
 }
 
 div#block-block-4 p.imagen + p {
@@ -484,6 +485,34 @@ div#block-block-4 p.imagen + p {
 div#block-block-4 p.imagen {
   width: auto;
   margin-top: 0px;
+}
+
+div#block-block-7 {
+  float: left;
+}
+div#block-block-7 p {
+  float: left;
+  margin-top: 30px;
+  padding-left: 5px;
+}
+
+#block-multiblock-2{
+  width: auto;
+  float: left;
+}
+
+#block-multiblock-2 ul{
+  margin-top: 38px;
+}
+
+#block-multiblock-2 ul li{
+  float: left;
+  border-right: 1px #90a627 solid;
+  padding: 0px 7px 2px;
+}
+
+#block-multiblock-2 ul li a.active {
+  color: #90a627;
 }
 
 div#block-menu-menu-menu-footer {

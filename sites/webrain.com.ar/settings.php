@@ -206,9 +206,9 @@ $databases = array (
     'default' => 
     array (
       'database' => 'drupaltest',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => 'localhost',
+      'username' => 'mamu',
+      'password' => 'mamu',
+      'host' => '192.168.1.100',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
