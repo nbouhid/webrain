@@ -112,6 +112,7 @@
 
   function initSlider() {
     var carousel_container = $('div.view-slider div.view-content div.item-list');
+    var text_container = $('div.view-slider div.view-text');
     if(carousel_container.length) {
       Drupal.carousel = {};
       Drupal.carousel.sliding = false;
@@ -128,10 +129,21 @@
             slider_obj.slider('value', element_id);
           }
           
+          //changing text
+          text_container.children().fadeOut(250, function() {
+            $(text_container).html($('ul li', carousel_container).eq(element_id-1).find('div.info').html());
+            $(this).fadeIn(250);
+           });
+
           Drupal.carousel.curr_slide = element_id;
         },
         rotation: 3000
       });  
+      
+      //updating text container
+      text_container.html($('ul li:first div.info', carousel_container).html());
+      
+      //scroll object
       slider_obj.slider({
         animate: '450',
         min: 1,

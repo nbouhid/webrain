@@ -4,13 +4,9 @@ function webrain_preprocess_views_view(&$vars) {
   _webrain_perform_view_preprocess(__FUNCTION__, $vars);
 }
 
-/**
- * Implementation of template_preprocess_views_view_fields
- * 
- * @param array $vars
- */
-function webrain_preprocess_views_view_fields(&$vars) {
-  _webrain_perform_view_preprocess(__FUNCTION__, $vars);
+function webrain_preprocess_views_view__slider__block_1(&$vars) {
+  
+
 }
 
 /**
@@ -20,6 +16,22 @@ function webrain_preprocess_views_view_field(&$vars) {
   _webrain_perform_view_preprocess_field(__FUNCTION__, $vars);
 }
 
+/**
+ * Gateway function responsible for calling appropriate preprocess function (if it exists),
+ * according to the view/block being displayed.
+ * 
+ * @param string $preprocess_prefix
+ * @param array $vars
+ */
+function _webrain_perform_view_preprocess_field($preprocess_prefix, &$vars) {
+  $view = $vars['view'];
+
+  $function = implode('__', array($preprocess_prefix, $view->name, $view->current_display, $vars['field']->field));
+
+  if (function_exists($function)) {
+    $function($vars);
+  }
+}
 
 /**
  * Implementation of template_preprocess_node
@@ -85,30 +97,13 @@ function webrain_html_head_alter(&$head_elements) {
  * @param string $preprocess_prefix
  * @param array $vars
  */
-function _webrain_perform_view_preprocess_field($preprocess_prefix, &$vars) {
-  $view = $vars['view'];
-
-  $function = implode('__', array($preprocess_prefix, $view->name, $view->current_display, $vars['field']->field));
-
-  if (function_exists($function)) {
-    $function($vars);
-  }
-}
-
-/**
- * Gateway function responsible for calling appropriate preprocess function (if it exists),
- * according to the view/block being displayed.
- * 
- * @param string $preprocess_prefix
- * @param array $vars
- */
 function _webrain_perform_view_preprocess($preprocess_prefix, &$vars) {
   $view = $vars['view'];
 
   $function = implode('__', array($preprocess_prefix, $view->name, $view->current_display));
-var_dump($function);
+
   if (function_exists($function)) {
-    //$function($vars);
+    $function($vars);
   }
 }
 
