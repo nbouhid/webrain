@@ -155,8 +155,6 @@
 
         carousel_items_list.click(function() {
           if(Drupal.carousel.sliding === false) {
-            //carousel_items_list.removeClass('active');
-            //$(this).addClass('active');
             slider_obj.slider('value', $(this).index()+1);
             setTimeout('Drupal.carousel.goBySlider();', 100);
           }

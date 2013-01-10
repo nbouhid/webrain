@@ -26,21 +26,25 @@ div.view-slider div.view-content div.item-list li{
 /* Cosmetic */
 .carousel-previous, .carousel-next{
 	cursor: pointer;
-	font-size: 0.8em;
-	text-decoration: none;	
-  background-color: #242f21;
+  font-size: 0.8em;
+  text-decoration: none;	
+  background-color: #90A627;
+  color: #000000;
   width: 13px;
-  height: 20px;
-  font-size: 21px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 8px 5px;
+  padding: 10px;
   position: absolute;
   z-index: 5;
   bottom: 0px;
+  font-family: impact;
 }
 .carousel-previous {
   right: 25px;
+  padding-right: 5px;
 }
 .carousel-next {
-  right: 2px;
+  right: 0px;
+  padding-left: 5px;
+  padding-right: 8px;
 }
