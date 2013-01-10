@@ -24,30 +24,45 @@
  */
 ?>
 <?php 
+//Showing first this two fields and rendering the image at last
 $fields_agrupados = array(
   'field_cliente' => isset($fields['field_cliente'])?$fields['field_cliente']:FALSE,
   'field_trabajo'  => isset($fields['field_trabajo'])?$fields['field_trabajo']:FALSE
 );
+$field_image = $fields['field_image'];
+unset($fields['field_image']);
 ?>
-<?php if($fields_agrupados['field_cliente'] && $fields_agrupados['field_trabajo']): ?>
-<div class="container-subtitulo-texto">
-  <?php foreach($fields_agrupados as $id => $field) : ?>
-    <?php unset($fields[$id]); ?>
+<div class="info">
+  <?php if($fields_agrupados['field_cliente'] && $fields_agrupados['field_trabajo']): ?>
+  <div class="container-subtitulo-texto">
+    <?php foreach($fields_agrupados as $id => $field) : ?>
+      <?php unset($fields[$id]); ?>
+      <?php print $field->wrapper_prefix; ?>
+      <?php print $field->label_html; ?>
+      <?php print $field->content; ?>
+      <?php print $field->wrapper_suffix; ?>
+    <?php endforeach; ?>
+  </div>
+  <?php endif; ?>
+
+  <?php foreach ($fields as $id => $field): ?>
+    <?php if (!empty($field->separator)): ?>
+      <?php print $field->separator; ?>
+    <?php endif; ?>
+
     <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
+      <?php print $field->label_html; ?>
+      <?php print $field->content; ?>
     <?php print $field->wrapper_suffix; ?>
   <?php endforeach; ?>
 </div>
+
+<?php //we print the image now ?>
+<?php if (!empty($field_image->separator)): ?>
+  <?php print $field_image->separator; ?>
 <?php endif; ?>
 
-<?php foreach ($fields as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
-
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
-  <?php print $field->wrapper_suffix; ?>
-<?php endforeach; ?>
+<?php print $field_image->wrapper_prefix; ?>
+  <?php print $field_image->label_html; ?>
+  <?php print $field_image->content; ?>
+<?php print $field_image->wrapper_suffix; ?>

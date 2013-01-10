@@ -1,5 +1,5 @@
 div.view-slider div.view-content div.item-list{
-	width: 830px; /* Defines the size of the visible part of the carousel
+	width: 564px; /* Defines the size of the visible part of the carousel
 		Attention : if you only want to see plain items in the viewport,
 		the width of the viewport should take into account of :
 		- the items width
@@ -16,7 +16,7 @@ div.view-slider div.view-content div.item-list ul{
 	margin: 0;
 }
 div.view-slider div.view-content div.item-list li{
-	width: 830px; /* Defines the size of inner element */
+	width: 564px; /* Defines the size of inner element */
 	height: 175px;
 	float: left; /* Places list items side by side*/
 	list-style: none; /* Resets default - User Agent - style */

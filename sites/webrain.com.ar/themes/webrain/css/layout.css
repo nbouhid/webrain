@@ -598,9 +598,12 @@ div.view-slider {
 
 div.view-slider ul li {
   position: relative;
-  background-color: #293424;
 }
-  
+
+div.view-slider ul li div.info {
+  display: none;
+}
+
 div.view-slider ul li img {
   position: absolute;
   top: 0;
@@ -608,7 +611,16 @@ div.view-slider ul li img {
   height: 175px;
 }
 
-div.view-slider ul li div.views-field-field-seccion {
+div.view-slider div.view-text {
+  background-color: #293424;
+  display: block;
+  height: 175px;
+  width: 270px;
+  float: left;
+  position: relative;
+}
+
+div.view-slider div.view-text div.views-field-field-seccion {
   position: absolute;
   top: 25px;
   left: 25px;
@@ -619,7 +631,7 @@ div.view-slider ul li div.views-field-field-seccion {
 }
 
 
-div.view-slider ul li div.container-subtitulo-texto {
+div.view-slider div.view-text div.container-subtitulo-texto {
   position: absolute;
   bottom: 20px;
   left: 25px;
@@ -627,16 +639,20 @@ div.view-slider ul li div.container-subtitulo-texto {
 }
 
 
-div.view-slider ul li div.views-field-field-cliente {
+div.view-slider div.view-text div.views-field-field-cliente {
   font-family: 'TitilliumText22LBold';
   font-size: 15px;
   color: #a9c511;
 }
 
-div.view-slider ul li div.views-field-field-trabajo {
+div.view-slider div.view-text div.views-field-field-trabajo {
   font-family: 'TitilliumText22LThin';
   color: #a9c511;
   font-size: 15px;
+}
+
+div.view-slider div.view-content {
+  float: left;
 }
 
 div.slider {
