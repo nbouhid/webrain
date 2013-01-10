@@ -83,8 +83,7 @@ div#page {
   min-width: 900px;
 }
 #footer {
-  width: 100%;
-  min-width: 920px;
+  padding: 20px;
 }
 
 ul li.leaf,
@@ -156,11 +155,12 @@ div#block-block-1 {
 /** Iconos cabecera **/
 div#block-block-2 {
 	width: 530px;
-  margin-top: 90px;
-  margin-bottom: 55px;
-  height: 20px;
+	margin-top: 90px;
+	margin-bottom: 55px;
+	height: 20px;
 	vertical-align: bottom;
 	text-align: right;
+	padding-right: 20px;
 }
 
 div#block-block-2 div.content {
@@ -232,8 +232,7 @@ div#block-system-main-menu ul li a:hover {
 
 /** Slogan **/
 div#block-block-3 {
-  width: 520px;
-  margin-right: 50px;
+  width: 550px;
   float: right;		
 }
 div#block-block-3 h2 {
@@ -400,7 +399,7 @@ body.node-type-webform form#webform-client-form-4 div.captcha {
 }
 
 form#webform-client-form-4 {
-	width: 552px;
+	width: 560px;
 	height: 286px;
   float: left;
 }
@@ -411,7 +410,7 @@ form#webform-client-form-4 > div {
 }
 
 form#webform-client-form-4 > div > div {
-	width: 262px;
+	width: 260px;
 }
 
 form#webform-client-form-4 div.left-side {
@@ -457,8 +456,11 @@ body.page-node-12 form#webform-client-form-4 > div {
 /** [end of] CONTACT FORM **/
 
 /** debajo contenido **/
+#page .content-bottom {
+  padding: 20px;
+}
 div.region-content-bottom {
-  margin-top: 50px;
+  padding-top: 50px;
   clear: both;
   height: 290px;
 }
@@ -470,12 +472,13 @@ div#block-block-4 {
   font-family: Verdana;
   font-size: 11px;
   color: #90a627;
-  width: 65%;
+  width: 66%;
   float: left;
 }
 
 div#block-block-4 p {
   float: left;
+  width: 65%
 }
 
 div#block-block-4 p.imagen + p {
@@ -550,8 +553,15 @@ div.view-cuadros-home ul {
 div.view-cuadros-home ul li {
   float: left;
   margin: 0;
-  width: 285px;
+  width: 260px;
   height: 440px;
+  padding-right: 40px;
+}
+div.view-cuadros-home ul li.views-row-3{
+  padding-right: 0px;
+}
+div.view-cuadros-home ul li.views-row-6{
+  padding-right: 0px;
 }
 div.view-cuadros-home ul li div {
   width: 260px;
@@ -574,7 +584,7 @@ div.view-cuadros-home ul li div.views-field-path {
   color: #7fb859;
 }
 div#block-block-5 { /* cuadro titulo contacto */
-  width: 305px;
+  width: 300px;
   float: left;
 }
 
@@ -619,7 +629,7 @@ div#block-block-6 p a {
 
 /** SLIDER & CAROUSEL **/
 div.view-slider {
-  width: 832px;
+  width: 860px;
   height: 200px;
   margin-bottom: 45px;
   position: relative;
@@ -644,7 +654,7 @@ div.view-slider div.view-text {
   background-color: #293424;
   display: block;
   height: 175px;
-  width: 270px;
+  width: 296px;
   float: left;
   position: relative;
 }
@@ -682,7 +692,7 @@ div.view-slider div.view-text div.views-field-field-trabajo {
 
 div.view-slider div.view-content {
   float: left;
-  width: 562px;
+  width: 564px;
 }
 
 div.slider {
