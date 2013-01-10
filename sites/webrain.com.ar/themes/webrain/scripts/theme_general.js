@@ -122,11 +122,20 @@
       
       var carousel_elements = $('ul li', carousel_container).length;
       var slider_obj = $('div.view-slider div.slider');
+      var carousel_items_list = $('div.view-id-slider_list_sidebar ul li');
       carousel_container.carousel('.carousel-previous', '.carousel-next', {
         change: function(element_id) {
+          Drupal.carousel.curr_slide = element_id;
+          
           //Update the position of the slider
           if(Drupal.carousel.sliding === false) {
             slider_obj.slider('value', element_id);
+
+            if(carousel_items_list.length > 0) {
+              carousel_items_list.removeClass('active')
+                .eq(element_id-1)
+                .addClass('active');
+            }
           }
           
           //changing text
@@ -134,14 +143,25 @@
             $(text_container).html($('ul li', carousel_container).eq(element_id-1).find('div.info').html());
             $(this).fadeIn(250);
            });
-
-          Drupal.carousel.curr_slide = element_id;
         },
         rotation: 3000
       });  
       
       //updating text container
       text_container.html($('ul li:first div.info', carousel_container).html());
+      //update sidebar list if exists
+      if(carousel_items_list.length > 0) {
+        $(carousel_items_list).eq(0).addClass('active');
+
+        carousel_items_list.click(function() {
+          if(Drupal.carousel.sliding === false) {
+            //carousel_items_list.removeClass('active');
+            //$(this).addClass('active');
+            slider_obj.slider('value', $(this).index()+1);
+            setTimeout('Drupal.carousel.goBySlider();', 100);
+          }
+        });
+      }
       
       //scroll object
       slider_obj.slider({
@@ -162,12 +182,20 @@
       
       Drupal.carousel.goBySlider = function() {
         var slider_value = slider_obj.slider('value');
-        if(Drupal.carousel.curr_slide != slider_value) {         
+
+        if(Drupal.carousel.curr_slide != slider_value) {
+          Drupal.carousel.sliding = true;
+          
           if(Drupal.carousel.curr_slide < slider_value)
             Drupal.carousel.next_btn.click();
           else if(Drupal.carousel.curr_slide > slider_value)
             Drupal.carousel.prev_btn.click();
 
+          if(carousel_items_list.length > 0) {
+            carousel_items_list.removeClass('active')
+              .eq(Drupal.carousel.curr_slide-1)
+              .addClass('active');
+          }
           setTimeout('Drupal.carousel.goBySlider();', 500);
         } else {
           Drupal.carousel.sliding = false;

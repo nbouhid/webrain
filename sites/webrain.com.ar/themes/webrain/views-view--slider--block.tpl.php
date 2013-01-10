@@ -49,12 +49,12 @@
       <?php print $attachment_before; ?>
     </div>
   <?php endif; ?>
-  <?php //here goes the info text near to the carousel ?>
-  <div class="view-text"></div>
   <?php if ($rows): ?>
     <div class="view-content">
       <?php print $rows; ?>
     </div>
+    <?php //here goes the info text near to the carousel ?>
+    <div class="view-text"></div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
       <?php print $empty; ?>

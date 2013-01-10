@@ -1,12 +1,11 @@
 <?php
 
+
+/**
+* Preprocess to call view preprocess.
+*/
 function webrain_preprocess_views_view(&$vars) {
   _webrain_perform_view_preprocess(__FUNCTION__, $vars);
-}
-
-function webrain_preprocess_views_view__slider__block_1(&$vars) {
-  
-
 }
 
 /**
