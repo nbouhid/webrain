@@ -654,13 +654,10 @@ div.view-slider div.view-text {
   background-color: #293424;
   display: block;
   height: 175px;
-<<<<<<< HEAD
   width: 270px;
   float: right;
-=======
-  width: 296px;
-  float: left;
->>>>>>> d15a4bdf4e8aded29ecaa9ac296aed1511183c71
+  /*width: 296px;
+  float: left;*/
   position: relative;
 }
 
@@ -696,13 +693,12 @@ div.view-slider div.view-text div.views-field-field-trabajo {
 }
 
 div.view-slider div.view-content {
-<<<<<<< HEAD
   float: right;
   width: 562px;
-=======
+/*
   float: left;
   width: 564px;
->>>>>>> d15a4bdf4e8aded29ecaa9ac296aed1511183c71
+*/
 }
 
 div.slider {
