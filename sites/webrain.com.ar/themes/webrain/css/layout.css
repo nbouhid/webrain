@@ -413,6 +413,10 @@ form#webform-client-form-4 > div > div {
 	width: 260px;
 }
 
+form#webform-client-form-4 > div > div button.jqTransformButton{
+	float: right;
+}
+
 form#webform-client-form-4 div.left-side {
 	float: left;
 	margin-right: 28px;
@@ -733,3 +737,64 @@ div.view-slider div.slider a.ui-slider-handle.ui-state-default {
 li.views-row.active {
   color: red;
 }
+
+/** DESARROLLO WEB **/
+#block-block-8 #web_mobile{
+	width: 570px;
+	height: 177px;
+	background: #4F6216;
+}
+
+#block-block-8 #web_mobile img{
+	float: left;
+}
+
+#block-block-8 #web_mobile div{
+	float: left;
+	width: 258px;
+	padding: 0px 20px;
+	color: #dfdbdc;
+	font-family: Verdana;
+	font-size: 13px;
+}
+
+#block-block-8 #web_mobile div#web_title{
+	padding: 15px;
+	font-family: 'TitilliumText22LThin';
+	font-size: 24px;
+	color: #92AA12;
+}
+
+#block-block-8 #web_mobile div#web_title span{
+	font-family: 'TitilliumText22LBold';
+}
+
+#block-block-8 #web_mobile div#web_content{
+	height: 100%;
+}
+
+#block-block-8 #web_mobile div#web_content a{
+	color: #92AA12;
+	font-weight: bold;
+}
+
+#block-block-8 #web_mobile div#web_content a:hover{
+	color: #A9C412;
+}
+
+#block-block-8 #web_mobile div#web_content a.plus{
+	background: url(../images/mas_off.png) no-repeat top left;
+	float: right;
+	display: block;
+	width: 31px;
+	height: 31px;
+	margin-right: -30px;
+	margin-top: 1px;
+	cursor: pointer;
+}
+
+#block-block-8 #web_mobile div#web_content a.plus:hover{
+	background: url(../images/mas_on.png) no-repeat top left;
+}
+
+/** [end of] desarrollo web **/
