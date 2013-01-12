@@ -69,7 +69,9 @@ DirectoryIndex index.php index.html index.htm
   # If you do not have mod_rewrite installed, you should remove these
   # directories from your webroot or otherwise protect them from being
   # downloaded.
-  RewriteRule "(^|/)\." - [F]
+  RewriteRule "(^|/)\." - [F]  
+  RewriteRule ^files/(.*)$ /sites/webrain.com.ar/files/$1 [L]
+  RewriteRule ^en/(.*)$ $1 [L]
   
   RewriteRule ^files/(.*)$ /sites/webrain.com.ar/files/$1 [L]
   RewriteRule ^en/(.*)$ $1 [L]
