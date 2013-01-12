@@ -93,7 +93,7 @@
 	        <div id="left-sidebar" class="column sidebar">
 	        	<div class="section">
 			        <?php print render($title_prefix); ?>
-			        <?php if ($title): ?><h1 class="title<?php if($long_title) print ' titulo-largo'; ?>" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+			        <?php if ($title): ?><h1 class="title<?php if(isset($long_title)&&$long_title) print ' titulo-largo'; ?>" id="page-title"><?php print $title; ?></h1><?php endif; ?>
 			        <?php print render($title_suffix); ?>
 							<?php print $messages; ?>
 		          <?php print render($page['left_sidebar']); ?>

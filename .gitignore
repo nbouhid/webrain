@@ -4,12 +4,13 @@ sites/*/*settings*.php
 # Ignore paths that contain generated content.
 cache/
 files/
-sites/*/files
+sites/*/files/styles
+sites/*/files/css
+sites/*/files/js
 sites/*/private
 
 # Ignore default text files
 .htaccess
-robots.txt
 /CHANGELOG.txt
 /COPYRIGHT.txt
 /INSTALL*.txt
